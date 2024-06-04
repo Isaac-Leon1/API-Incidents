@@ -4,7 +4,7 @@ let URL = "http://localhost:4000/incidents";
 //crear objetos
 const incidentModel = {
     //crear metodos asincronos
-    //create del crude
+    //create del crud
     async createIncidentModel(dataIncident){//modelo creado
         //peticion a la base de datos
         const response = await fetch(URL, {

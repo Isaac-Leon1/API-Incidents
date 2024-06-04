@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node --watch src/index.js",
     "start": "node src/index.js",
-    "bdd": "json-server --watch db.json --port=4000"
+    "bdd": "npx json-server --watch database.json --port 4000"
   },
   "keywords": [],
   "author": "",
