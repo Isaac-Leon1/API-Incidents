@@ -1,5 +1,5 @@
 import {Router} from "express";
-import { getAllIncidentController, getIncidentByIDController, createIncidentController } from '../controllers/deliquency_controller.js';
+import { getAllIncidentController, getIncidentByIDController, createIncidentController } from '../controllers/delinquency_controller.js';
 
 const router = Router();
 

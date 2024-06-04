@@ -1,4 +1,4 @@
-import incidentModel from "../models/delinquency.js";
+import incidentModel from "../models/delinquency_model.js";
 
 import {v4 as uuidv4} from 'uuid';
 
