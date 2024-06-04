@@ -46,9 +46,34 @@ const createIncidentController = async (req, res) => {
 
 }
 
+const updateIncidentController = async(req, res)=> {
+    const {id} = req.params
+    try {
+        const incident = await incidentModel.updateIncidentModel(id,req.body)
+        const status = incident.error ? 404 : 200
+        res.status(status).json(tour)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
+const deleteIncidentController = async(req, res)=> {
+    const {id} = req.params
+    try {
+        const incident = await incidentModel.deleteIncidentModel(id)
+        const status = incident.error ? 404 : 200
+        res.status(status).json(tour)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+
+
 //Exportar las funciones
 export {
     getAllIncidentController,
     getIncidentByIDController,
-    createIncidentController
+    createIncidentController,
+    updateIncidentController,
+    deleteIncidentController
 }
