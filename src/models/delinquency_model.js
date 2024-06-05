@@ -29,11 +29,6 @@ const incidentModel = new mongoose.Schema({
         required: true, // Si es requerido el dato
         trim: true // Eliminar espacios en blanco a los costados de la cadena
     },
-    involvedPeople: {
-        type: String, // Tipo de dato
-        required: true, // Si es requerido el dato
-        trim: true // Eliminar espacios en blanco a los costados de la cadena
-    },
     status: {
         type: String, // Tipo de dato
         required: true, // Si es requerido el dato
