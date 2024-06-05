@@ -3,6 +3,7 @@ import express from 'express'
 //Rutas
 import incidentRoutes from './routers/delinquency_routes.js'
 
+//Inicializacion
 const app = express()
 
 //Variable
