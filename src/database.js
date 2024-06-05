@@ -1,8 +1,10 @@
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 // URL
-let URL = "mongodb+srv://isaac1leon:Gxum6RR4WeAfdnhY@cluster0.wbs4pjk.mongodb.net/APIncidents?retryWrites=true&w=majority"
-
+let URL = process.env.URL || ""
 const connectMongoDB = async () =>{
     try {
         await mongoose.connect(URL)
