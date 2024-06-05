@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-// URL
+// String de conexion al servidor (MongoDB Atlas)
 let URL = "mongodb+srv://isaac1leon:Gxum6RR4WeAfdnhY@cluster0.wbs4pjk.mongodb.net/APIncidents?retryWrites=true&w=majority"
 
 // Conexion a la base de datos MongoDB
@@ -13,4 +13,5 @@ const connectMongoDB = async () =>{
     }
 }
 
-export default connectMongoDB // Exportar la conexion
+// Exportar la conexion
+export default connectMongoDB;
