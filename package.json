@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch src/index.js",
-    "start": "node src/index.js",
-    "bdd": "npx json-server --watch database.json --port 4000"
+    "start": "concurrently \"npm:dev\" \"npm:bdd\"",
+    "bdd": "npx json-server --watch db.json --port 4000"
   },
   "keywords": [],
   "author": "",
