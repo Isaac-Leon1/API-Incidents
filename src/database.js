@@ -3,8 +3,9 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-// URL
+// String de conexion al servidor (MongoDB Atlas)
 let URL = process.env.URL || ""
+
 const connectMongoDB = async () =>{
     try {
         await mongoose.connect(URL)
@@ -14,4 +15,5 @@ const connectMongoDB = async () =>{
     }
 }
 
-export default connectMongoDB // Exportar la conexion
+// Exportar la conexion
+export default connectMongoDB;

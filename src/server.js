@@ -3,6 +3,7 @@ import express from 'express'
 //Rutas
 import incidentRoutes from './routers/delinquency_routes.js'
 
+//Inicializacion
 const app = express()
 
 //Variable
@@ -18,4 +19,5 @@ app.get('/',(req,res)=>{
 
 app.use('/api/v1', incidentRoutes);
 
+//Exportar app
 export default  app

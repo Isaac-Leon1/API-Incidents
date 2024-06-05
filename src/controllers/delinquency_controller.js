@@ -11,6 +11,14 @@ const getAllIncidentController = async (req, res) => {
     try {
         // Obtener todos los registros de la base de datos
         const incident = await incidentModel.find();
+
+        //queryparams para  clasificar los tipos de incidentes
+        const {clasific} = req.query; 
+        if (clasific) {
+            const incidentFilter = incident.filter(incident => incident.type === clasific);
+            return res.status(200).json(incidentFilter);
+        }
+
         // Enviar la respuesta al cliente
         res.status(200).json(incident);
     } catch (error) {
